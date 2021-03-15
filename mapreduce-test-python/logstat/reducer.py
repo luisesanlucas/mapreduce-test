@@ -32,7 +32,7 @@ for ip, count in sorted_dict_ip_count:
     except ValueError:
         pass
 
-
+print (freq_ips[2])
 for i in range(24):
     if freq_ips[i] == '[]':
         next
