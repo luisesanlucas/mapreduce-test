@@ -10,7 +10,7 @@ for line in sys.stdin:
     ip, num = line.split('\t')
     try:
         num = int(num)
-        dict_ip_count[ip] = dict_ip_count.get(ip, 0) + num
+        dict_ip_count[ip] = dict_ip_count.get(ip, 1) + num
 
     except ValueError:
         pass
