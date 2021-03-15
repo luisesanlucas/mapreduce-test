@@ -10,7 +10,7 @@ for line in sys.stdin:
     ip, num = line.split('\t')
     try:
         num = int(num)
-        dict_ip_count[ip] = dict_ip_count.get(ip, 0) + num
+        dict_ip_count[ip] = dict_ip_count.get(ip,0) + num
 
     except ValueError:
         pass
@@ -28,7 +28,7 @@ for ip, count in sorted_dict_ip_count.items():
         count = int(count)
         freq_ips[h].append([ip,count])
 
-    exept ValueError:
+    except ValueError:
         pass
 
 beg = input ('Enter start time: ')
