@@ -16,5 +16,23 @@ for line in sys.stdin:
 
 
 sorted_dict_ip_count = sorted(dict_ip_count.items(), key=itemgetter(0))
-for ip, count in sorted_dict_ip_count:
-    print '%s\t%s' % (ip, count)
+
+freq_ips = {}
+
+for ip, count in sorted_dict_ip_count.items():
+    h,ip_ = ip.split(' ')
+
+    try:
+        h = int(h)
+        count = int(count)
+        freq_ips[h].append([ip,count])
+
+    exept ValueError:
+        pass
+
+for i in range(24):
+    t_3 = sorted(freq_ips[i], key=lambda v:v[1], reverse=True)[0:3]
+    print '%s\t%s' % (i, t_3)
+
+
+
