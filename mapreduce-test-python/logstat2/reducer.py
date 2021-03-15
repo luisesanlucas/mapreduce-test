@@ -27,7 +27,7 @@ for ip, count in sorted_dict_ip_count.items():
         count = int(count)
         freq_ips[h].append([ip,count])
 
-    exept ValueError:
+    except ValueError:
         pass
 
 for i in range(24):
