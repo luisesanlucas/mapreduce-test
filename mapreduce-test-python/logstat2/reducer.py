@@ -19,7 +19,7 @@ sorted_dict_ip_count = sorted(dict_ip_count.items(), key=itemgetter(0))
 
 freq_ips = {}
 
-for ip, count in sorted_dict_ip_count.items():
+for ip, count in sorted_dict_ip_count:
     h,ip_ = ip.split(' ')
 
     try:
