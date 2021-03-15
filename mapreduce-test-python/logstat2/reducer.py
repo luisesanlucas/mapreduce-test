@@ -17,9 +17,9 @@ for line in sys.stdin:
 
 
 sorted_dict_ip_count = sorted(dict_ip_count.items(), key=itemgetter(0))
-
-for i in sorted_dict_ip_count:
-    print i
+#prints dict unsorted
+for i in dict_ip_count:
+    print i, dict_ip_count[i]
 
 freq_ips = defaultdict(list)
 
