@@ -30,11 +30,16 @@ for ip, count in sorted_dict_ip_count:
 
     except ValueError:
         pass
-
+'''
 beg = input ('Enter start time: ')
 beg = int(beg)
 en = input ('Enter end time: ')
 en = inst(en)
+'''
+
+beg = int(sys.argv[1])
+en = int(sys.argv[2])
+
 for i in range(beg,en):
     t_3 = sorted(freq_ips[i], key=lambda v:v[1], reverse=True)[0:3]
     print '%s\t%s' % (i, t_3)
