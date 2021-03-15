@@ -7,9 +7,9 @@
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.9.2.jar \
 -input /logstat/input/* \
 -output /logstat/output/ \
--mapper ../../mapreduce-test-python/logstat/mapper.py \
+-mapper '../../mapreduce-test-python/logstat/mapper.py 14 17' \
 -file ../../mapreduce-test-python/logstat/mapper.py
--reducer '../../mapreduce-test-python/logstat/reducer.py 14 17' \
+-reducer ../../mapreduce-test-python/logstat/reducer.py \
 -file ../../mapreduce-test-python/logstat/reducer.py 
 
 /usr/local/hadoop/bin/hdfs dfs -cat /logstat/output/part-00000
