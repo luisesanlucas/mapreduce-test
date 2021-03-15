@@ -10,11 +10,10 @@ for line in sys.stdin:
     ip, num = line.split('\t')
     try:
         num = int(num)
-        dict_ip_count[ip] = dict_ip_count.get(ip, 1) + num
+        dict_ip_count[ip] = dict_ip_count.get(ip, 0) + num
 
     except ValueError:
         pass
-
 
 sorted_dict_ip_count = sorted(dict_ip_count.items(), key=itemgetter(0))
 #prints dict unsorted
