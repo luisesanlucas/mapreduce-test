@@ -32,10 +32,7 @@ for ip, count in sorted_dict_ip_count:
     except ValueError:
         pass
 
-print (freq_ips[2])
 for i in range(24):
-    if freq_ips[i] == '[]':
-        next
-    else:
+    if freq_ips[i]:
         t_3 = sorted(freq_ips[i], key=lambda v:v[1], reverse=True)[0:3]
         print '%s\t%s' % (i, t_3)
