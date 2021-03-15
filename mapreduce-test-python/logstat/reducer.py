@@ -34,5 +34,6 @@ for ip, count in sorted_dict_ip_count:
 
 
 for i in range(24):
-    t_3 = sorted(freq_ips[i], key=lambda v:v[1], reverse=True)[0:3]
-    print '%s\t%s' % (i, t_3)
+    if freq_ips[i]=! '[]'
+        t_3 = sorted(freq_ips[i], key=lambda v:v[1], reverse=True)[0:3]
+        print '%s\t%s' % (i, t_3)
